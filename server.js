@@ -19,13 +19,11 @@ app.use(cors(cors_options));
 // routing
 const auth = require('./routes/auth.js')
 const callback = require('./routes/callback.js')
-const test = require('./routes/get_market_data.js')
-const test_local = require('./routes/SendMarketDataToDjango.js')
-const getMarketData = require('./routes/getMarketData.js')
+const update_orders = require('./routes/market_orders/esi_get_market_data.js')
+
 app.use('/auth', auth)
 app.use('/callback', callback)
-app.use('/test', test)
-app.use('/SendMarketDataToDjango', test_local)
-app.use('/getmarketdata', getMarketData)
+app.use('/update_orders', update_orders)
+
 
 app.listen(3001)
