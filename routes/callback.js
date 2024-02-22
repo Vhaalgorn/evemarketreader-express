@@ -28,7 +28,7 @@ async function fetchRequest (req, res)
     res.cookie('refresh_token', refresh_token, { maxAge: 900000})
     res.cookie('character_id', character_id, { maxAge: 900000})
     res.cookie('character', JSON.stringify(character), { maxAge: 900000})
-    res.redirect('http://localhost:3001')
+    res.redirect('http://localhost:3001/')
 }
 async function getCharacter(access_token,character_id)
 {
